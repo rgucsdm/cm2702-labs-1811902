@@ -1,39 +1,64 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>The Blog</title>
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
-    </head>
-    <body>
-        <header id="PageHeader">
-            <img src="images\the-blog.jpg" id = "SiteLogo"/>
-            <h1 id="SiteTitle">The Blog</h1>
-        </header>
-        <nav id="SiteNavigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <section id="PageContent">
-            <article class="BlogPost">
-                <header>
-                    <h1 class ="BlogPostTitle">This is a Blog Post Title</h1>
-                    <time class="BlogPostDate" pubdate="pubdate">2012-02-10</time>
-                </header>
-                <div class="BlogPostContent">
-                    <p class="warning">This text will be displayed in bold</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                        des do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua.</p>
-                </div>
-            </article>
-        </section>
-        <footer id="PageFooter">
-            <a href="#">Legal Stuff</a>
-        </footer>
-    </body>
-    
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Blog</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+    <header id="PageHeader">
+        <img src="images\the-blog.jpg" id="SiteLogo" />
+        <h1 id="SiteTitle">The Blog</h1>
+    </header>
+    <nav id="SiteNavigation">
+        <ul>
+            <li><a href="#">Home</a>
+            </li>
+            <li><a href="#">About</a>
+            </li>
+            <li><a href="#">Contact</a>
+            </li>
+        </ul>
+        <ul class="clearfix"></ul>
+    </nav>
+    <section id="PageContent">
+
+        <div class="LeftColumn Column">
+            <div class="MainImage">
+                <img src="images\the-blog.jpg" id="MainImage" />
+            </div>
+            <div class="ImageDetails">
+                Image details will appear here
+            </div>
+        </div>
+
+        <div class="RightColumn Column">
+            <div class="gallery">
+                <img src="images\the-blog.jpg"/>
+                <img src="images\the-blog.jpg"/>
+                <img src="images\the-blog.jpg"/>
+                <img src="images\the-blog.jpg"/>
+                <img src="images\the-blog.jpg"/>
+                <img src="images\the-blog.jpg"/>
+                <img src="images\the-blog.jpg"/>
+                <img src="images\the-blog.jpg"/>
+                <img src="images\the-blog.jpg"/>
+            </div>
+            <div class="ImageComments">
+               Image comments 
+            </div>
+        </div>
+
+        <div class="clearfix">
+
+        </div>
+
+    </section>
+    <footer id="PageFooter">
+        Footer info will appear here
+    </footer>
+</body>
+
 </html>

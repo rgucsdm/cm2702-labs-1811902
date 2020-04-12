@@ -12,6 +12,10 @@ header, section, article, nav, aside, footer, div {
 
 .warning{font-weight:bold;}
 
+#PageHeader {
+    clear: left;
+}
+
 #PageHeader img {
     float: left;
     margin: 10px;
@@ -19,20 +23,67 @@ header, section, article, nav, aside, footer, div {
 }
 
 #SiteTitle {
-    position: relative;
     padding-left: 90px;
+}
+
+.clearfix {
+    clear: left;
+    margin: 0px;
+    padding: 0px;
+    border: none;
 }
 
 #SiteNavigation ul {
     list-style-type: none;
+    padding-left: 10px;
 }
 
 #SiteNavigation li {
     float: left;
+    margin: 0px;
+    padding: 0px;
 }
 
 a {
     border: 1px dotted #000;
     padding: 8px;
     margin-right: 5px;
+}
+
+
+.Column {
+    margin: 0px;
+    padding: 0px;
+    --border: none;
+    float: left;
+    
+}
+
+.LeftColumn {
+    box-sizing:border-box;
+    width: 65%;
+}
+
+.RightColumn {
+    box-sizing:border-box;
+    width:34%;
+}
+
+.MainImage, .ImageDetails,  {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#MainImage {
+    width: 100%;
+}
+
+.gallery img {
+    box-sizing:border-box;
+    width: 30%;
+    border: 1px dotted #000;
+}
+
+footer {
+    clear: left;
 }
