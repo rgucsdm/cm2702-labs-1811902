@@ -1,39 +1,79 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>The Blog</title>
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
-    </head>
-    <body>
-        <header id="PageHeader">
-            <img src="the-blog.jpg" id = "SiteLogo"/>
-            <h1 id="SiteTitle">The Blog</h1>
-        </header>
-        <nav id="SiteNavigation">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <section id="PageContent">
-            <article class="BlogPost">
-                <header>
-                    <h1 class ="BlogPostTitle">This is a Blog Post Title</h1>
-                    <time class="BlogPostDate" pubdate="pubdate">2012-02-10</time>
-                </header>
+
+<head>
+    <meta charset="UTF-8">
+    <title>The Blog</title>
+    <link rel="stylesheet" type="text/css" href="../styles/flexboxstyle.css">
+</head>
+
+<body class="flex-container">
+
+    <header class="flex-container" id="PageHeader">
+        <img src="the-blog.jpg" id="SiteLogo" />
+        <h1 id="SiteTitle">The Blog</h1>
+    </header>
+
+
+    <nav class="flex-container" id="SiteNavigation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="flex-container" id="Content">
+        
+        <div class="flex-container ImageColumn" id="LeftColumn">
+            <img src="the-blog.jpg" id="MainImage" />
+            <div id="ImageDetails">
+                Image details will be displayed here
+            </div>
+        </div>
+        
+        <div class="flex-container ImageColumn" id="RightColumn">
+            <div class="flex-container" id="Thumbnails">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+                <img src="the-blog.jpg">
+            </div>
+            <div class="flex-container" id="ImageComment">
+                <div class="row">Comment</div>
+                <div class="row">Comment</div>
+                <div class="row">Comment</div>
+                <div class="row">Comment</div>
+                <div class="row">Comment</div>             
+            </div>
+        </div>
+        
+        
+
+        <article class="BlogPost">
+            <header>
+                <h1 class="BlogPostTitle">This is a Blog Post Title</h1>
+                <time class="BlogPostDate" pubdate="pubdate">2012-02-10</time>
                 <div class="BlogPostContent">
-                    <p class="warning">This text will be displayed in bold</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-                        des do eiusmod tempor incididunt ut labore et dolore magna 
-                    aliqua.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-            </article>
-        </section>
-        <footer id="PageFooter">
-            <a href="#">Legal Stuff</a>
-        </footer>
-    </body>
-    
+            </header>
+        </article>
+
+    </section>
+
+    <footer class="flex-container" id="PageFooter">
+        Footer content will appear here
+    </footer>
+
+</body>
+
 </html>
