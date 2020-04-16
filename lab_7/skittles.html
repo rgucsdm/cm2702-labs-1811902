@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p>Skittles</p>
+    <p>Fear</p>
+    <p>Anger</p>
+
+    <script>
+        var paragraphs = document.body.getElementsByTagName("p");
+        document.body.insertBefore(paragraphs[2], paragraphs[0]);
+        
+        // the following statement will replace the content of the body
+        //document.body.innerHTML = "<p>Well that was useful</p>";
+        var newPara = document.createElement("p");
+        var text = document.createTextNode("A Jedi craves not these things");
+        newPara.appendChild(text);
+        document.body.appendChild(newPara);
+
+        // replace element
+        // create another element - same as above but 
+        // creating and appending text to p is nested in element creation
+        newPara = document.createElement("p").appendChild(document.createTextNode("Aggression"));
+        document.body.replaceChild(newPara, paragraphs[1]);
+        
+        
+        
+        
+    </script>
+</body>
+</html>
