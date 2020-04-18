@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h1 id="id1">My Heading 1</h1>
+    
+    <button type="button" onclick="document.getElementById('id1').style.color='red';">
+        Colour me red
+    </button>
+    <button type="button" onclick="go()">
+        Colour me blue
+    </button>
+    <button type="button" onclick="goAgain()">
+        Colour me yellow
+    </button>
+    <script>
+        function go() {
+            document.getElementById("id1").style.color = "blue";
+        }
+    </script>
+    <script src="buttoncall.js"></script>
+</body>    
+
+</html>
