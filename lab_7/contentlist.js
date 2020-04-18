@@ -14,7 +14,9 @@ function addContent () {
 	// using javascript
 	// 1. find the content div
 	// 2. modify its html attribute by adding items_html
-	document.getElementById("content").innerHTML += items_html;
+	var newPara = document.createElement("p");
+    newPara.innerHTML = items_html;
+	document.getElementById("content").appendChild(newPara);
 }
 
 function addMoreContent() {
@@ -26,23 +28,30 @@ function addMoreContent() {
     // add list item as a child to <ul>
     for (var i=0; i < items.length; i++) {
         var li = document.createElement("li");
-        li.innerHTML = items[i];
+        li.appendChild(document.createTextNode(items[i]));
+        //li.innerHTML = items[i];
         ul.appendChild(li);
 	};
 
-    // add ul to content
-    document.getElementById("content").appendChild(ul);
+    // add ul to content as a new paragraph
+    var newPara = document.createElement("p");
+    newPara.appendChild(ul);
+    document.getElementById("content").appendChild(newPara);
 }
 
 function addItem(form) {
     var newItem = form.newItem.value;
-    var li = document.createElement("li");
-    li.innerHTML = newItem;
-    document.getElementById("customList").appendChild(li);
+    var newPara = document.createElement("p");
+    newPara.appendChild(document.createTextNode(newItem));
+    document.getElementById("content").appendChild(newPara);
 }
 
 function removeItem() {
-    var customList = document.getElementById("customList");
-    customList.removeChild(customList.lastChild);
+    var paras = document.getElementsByTagName("p");
+    if(paras.length==0) {
+        alert("Nothing to remove");
+    } else {
+        paras[paras.length-1].remove();
+    }
 }
 
