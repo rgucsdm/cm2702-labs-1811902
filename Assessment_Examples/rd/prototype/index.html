@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <title>Eclipsim</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Web App that informs user of chances of celestial events." />
+    <meta name="keywords" content="eclipse, aurora borealis, celestial, weather, astronomy" />
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script><!--Non slim version needed for fade in to work-->
+    <!-- Map -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" />
+    <!--Custom JavaScript link-->
+    <script src="js/script.js"></script>
+    <!--Bootstrap - bootstrap is used only for navbar-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!--Custom css link-->
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <!--Navbar is only setion that is using bootstrap  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbar">
+                <ul class="navbar-nav nav-fill w-100">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="homeButton" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="aboutButton" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="mapButton" href="#">Map</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--This is the section with circles, they are styled only with css, no js here-->
+    <section class="container" id='circleInterface'><!--New id circleInterface -->
+      <h2>Current readings for your location:</h2>
+      <div class="touple">
+        <div class="circle"><p>synch <span>location</span> <span class="green">good</span></p></div>
+      </div>
+      <div class="touple">
+        <div class="circle"><p>cloud <span>coverage</span> <span id="cloud" class="orange">mild</span></p></div>
+      </div>
+      <div class="touple">
+        <div class="circle"><p>temperature <span class="purple" id="temp">0&#176;C</span></p></div>
+      </div>
+      <div class="touple">
+        <div class="circle"><p>Meteor <span>chance</span> <span class="orange">20%</span></p></div>
+      </div>
+      <div class="touple">
+        <div class="circle"><p>Possible <span>weather</span> <span id="weather" class="red">snow</span></p></div>
+      </div>
+      <div class="touple">
+        <div class="circle"><p>Eclipse <span id='eclipseid' class="yellow">2143D</span></p></div>
+      </div>
+    </section>
+    <!--This is the map - all the JS here is only to handle the map-->
+    <section id="mapBox">
+      <h2>Best places for observation in your area:</h2>
+      <div id="map"></div>
+          <!--this script is hendling both location and weather API  -->
+          <script src="js/location.js"></script>
+    </section>
+      <section class="container" id="aboutPage">
+      <div class="columnright">
+        <h1>Eclipism</h1>
+      </div>
+      <div class="columnleft">
+          <p> This website focuses on mapping possible aurora locations and giving live feed on technical weather information<p>
+      </div>
+    </section>
+    <footer>
+        <p>&#169;
+        <a href="#">Stuart Blaxter</a>
+        <a href="#">Rami Amer</a>
+        <a href="#">Grzegorz Bronka</a>
+        <a href="#">Sam Black</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+}
+
+header {
+  background-color:rgb(95, 57, 98);
+  color: whitesmoke;
+  flex-direction: row;
+  align-items: center;
+}
+
+h1 {
+  margin: auto 2rem;
+}
+
+#logo {
+  height: 50pt;
+  --border: 1px solid black;
+}
+.navigation {
+  margin-left: auto;
+}
+.navigation div {
+  padding: 10px;
+  color: whitesmoke;
+  text-align: center;
+  text-transform: uppercase;
+  --border: 1px solid black;
+}
+
+.navigation div:hover {
+  background-color: rgb(69, 41, 71);
+}
+
+.navigation a {
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+<!--nav buttons only - not used-->
+.btn-navigation {
+  margin:0 auto;
+  height: 100%;
+  background-color:transparent;
+  border-color:whitesmoke;
+  border-radius:0;
+}

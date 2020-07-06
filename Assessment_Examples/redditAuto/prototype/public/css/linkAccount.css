@@ -1,0 +1,47 @@
+.subtitle {
+  font-size: 26px;
+  text-align: center;
+}
+
+.centerLinkArea {
+  display: flex;
+  justify-content: space-between;
+  width:50%;
+  max-width:450px;
+  padding-bottom:50px;
+}
+
+.graphicSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 50px;
+}
+
+.brandIcon {
+  height: 80px;
+}
+
+.linkIcon {
+  height: 50px;
+  margin-top: 20px;
+}
+
+.brandIcon, .linkIcon {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.iconSubText {
+  display: flow;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconSubText h3 {
+  margin-top: 15px;
+  font-size: 30px;
+  text-align: center !important;
+}

@@ -1,0 +1,38 @@
+/*
+ * Code used to customise leaflet controls such as the search bar and the layers button
+ */
+
+.leaflet-top.leaflet-right {
+    right: 50%;
+    transform: translate(50%, 0%);
+}
+
+.leaflet-bar{
+  opacity: 0.8;
+}
+
+.leaflet-bar:hover{
+  opacity: 0.9;
+}
+
+.leaflet-control-geocoder-icon:hover{
+  background-color: rgba(175,175,175,0.8);
+}
+
+.leaflet-popup-content h3, .leaflet-popup-content p {
+  margin:0;
+  margin-bottom: 5px;
+}
+
+.leaflet-control-geocoder{
+  padding: 3px;
+  border-color: rgba(10, 18, 91, 0.2);
+}
+
+.leafletbottom.leaflet-right{
+  margin-top: 50px;
+}
+
+.leaflet-touch .leaflet-bar, .leaflet-touch .leaflet-control-layers {
+  border-color: rgba(10, 18, 91, 0.6);
+}

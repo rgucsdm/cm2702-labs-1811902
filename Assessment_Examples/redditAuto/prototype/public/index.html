@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Reddit Autoplay</title>
+  <link rel="icon" href="images/RedditAutoplayPlayIcon.png">
+
+  <!-- CSS Stylesheets -->
+  <link href="css/main.css" rel="stylesheet">
+
+  <!-- CSS Frameworks/Plugins -->
+  <link href="css/vendor/hamburgers.css" rel="stylesheet">
+  <link href="css/materialize.css" rel="stylesheet">
+  <link href="css/overrides.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+  <!-- Menu button toggle -->
+  <button id="sidenav-button" class="hamburger hamburger--spin-r slider-trigger" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <!--Slider div-->
+  <section class="slider-container">
+    <div class="slider-parent">
+
+      <div class="sidenav-section">
+        <a class="quicklink">YoutubeHaiku</a>
+        <a class="quicklink">videos</a>
+        <a class="quicklink">cookingvideos</a>
+        <a class="quicklink">DeepIntoYoutube</a>
+        <a class="quicklink">Youtube</a>
+      </div>
+
+      <div class="sidenav-section">
+        <!-- Dropdown Trigger -->
+        <a class="dropdown-trigger btn-flat" href="#" data-target="timepicker">Search Period</a>
+
+        <!-- Dropdown Structure -->
+        <ul id="timepicker" class="dropdown-content">
+          <li><a href="#!">Hour</a></li>
+          <li><a href="#!">Day</a></li>
+          <li><a href="#!">Week</a></li>
+          <li><a href="#!">Month</a></li>
+          <li><a href="#!">Year</a></li>
+          <li class="divider" tabindex="-1"></li>
+          <li><a href="#!">All Time</a></li>
+        </ul>
+
+        <a href="#">Sign-in</a>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Center of page content -->
+  <section class="row">
+
+    <article class="col s10 m8 l6 offset-s1 offset-m2 offset-l3 search-area">
+      <!-- Title -->
+      <img src="images/RedditAutoplayBanner.svg" class="titleImage" alt="Reddit Autoplay">
+
+      <!-- Search bar -->
+      <form class="searchbar" action="/getform" method="post">
+        <!-- Text input -->
+        <input type="text" name="searchVariables" class="input" autocomplete="off" placeholder="Search for a subreddit">
+        <!-- Search Button -->
+        <input type="image" src="images/submitSearch.svg" alt="Submit" button = "Submit" class="searchbutton">
+
+      </form>
+
+      <!-- Filters -->
+      <form class="search-filters" action="index.html" method="GET">
+
+        <!-- Hot filter -->
+        <label class="waves-effect waves-orange btn-flat rapButton">
+          <input type="radio" name="filter" value="hot" checked>
+          <svg id="new-icon" class="filter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13.16 17.46">
+            <g>
+              <path d="M6.75.15L6.58 0l-.17.15C2.52 3.66 0 7.63 0 10.24c0 4.26 2.71 7.22 6.58 7.22s6.58-3 6.58-7.22c0-2.61-2.52-6.57-6.41-10.09zm-.17 14.7A2.77 2.77 0 0 1 3.66 12c0-.52.29-2 2.92-4.94C9.21 10 9.49 11.46 9.49 12a2.77 2.77 0 0 1-2.91 2.85z" />
+            </g>
+          </svg>
+          <span class="filter-name noselect">Hot</span>
+        </label>
+
+        <!-- New filter -->
+        <label class="waves-effect waves-orange btn-flat rapButton hide-radio">
+          <input type="radio" name="filter" value="new">
+          <svg id="new-icon" class="filter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.1 17.1">
+            <path d="M8.5 1.5L10.8 0l1.3 2.4 2.7-.1-.1 2.7 2.4 1.3-1.5 2.2 1.5 2.3-2.4 1.3.1 2.7-2.7-.1-1.3 2.4-2.3-1.5-2.2 1.5L5 14.7l-2.7.1.1-2.7L0 10.8l1.5-2.3L0 6.3 2.4 5l-.1-2.7 2.7.1L6.3 0z" /></svg>
+          <span class="filter-name noselect">New</span>
+        </label>
+
+        <!-- Contriversial filter -->
+        <label class="waves-effect waves-orange btn-flat rapButton hide-radio">
+          <input type="radio" name="filter" value="controversial">
+          <svg id="controversial-icon" class="filter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.5 16.8">
+            <path d="M9.7 5.2H5.9L7.3 1c.1-.4-.1-.9-.6-1H1.8c-.4 0-.7.3-.7.7L0 8.5c-.1.5.2.9.7.9h4l-1.5 6.4c-.1.4.2.8.6.9.3.1.7-.1.9-.4l5.8-10c.2-.4 0-.9-.4-1.1-.2.1-.3 0-.4 0z" /></svg>
+          <span class="filter-name noselect">Controversial</span>
+        </label>
+
+        <!-- Top filter -->
+        <label class="waves-effect waves-orange btn-flat rapButton hide-radio">
+          <input type="radio" name="filter" value="top">
+          <svg id="top-icon" class="filter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.2 17.3">
+            <path d="M7.6.2c-.3-.3-.7-.3-1 0L2.8 4c-.4.4-.4 1.1 0 1.5.2.2.5.3.7.3h1.8v10.6c0 .5.4.8.9.9h1.7c.5 0 .8-.4.9-.9V5.8h1.8c.6 0 1.1-.5 1-1.1 0-.3-.1-.5-.3-.7L7.6.2zM.9 10.8h1.7c.5 0 .9.4.9.9v4.7c0 .5-.4.9-.9.9H.9c-.5 0-.9-.4-.9-.9v-4.7c0-.5.4-.9.9-.9z" />
+            <path d="M11.7 6.5h1.7c.5 0 .9.4.9.9v9.1c0 .5-.4.9-.9.9h-1.7c-.5 0-.9-.4-.9-.9V7.4c0-.5.4-.9.9-.9z" /></svg>
+          <span class="filter-name noselect">Top</span>
+        </label>
+
+        <!-- Rising filter -->
+        <label class="waves-effect waves-orange btn-flat rapButton hide-radio">
+          <input type="radio" name="filter" value="rising">
+          <svg id="rising-icon" class="filter-icon" style="width:22px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.2 12.4">
+            <path d="M20.3 0h-6.5c-.7 0-1.3.6-1.3 1.3 0 .3.1.7.4.9L14.7 4l-4 4-4-4c-.8-.6-1.9-.6-2.6 0L.3 7.8C0 8.1 0 8.7.3 9l1.3 1.3c.3.3.9.3 1.2 0l2.5-2.5 4.1 4c.7.7 1.8.7 2.5 0l5.3-5.3L19 8.3c.5.5 1.4.5 1.9 0 .1-.3.3-.6.3-1V.9c0-.5-.4-.9-.9-.9z" /></svg>
+          <span class="filter-name noselect">Rising</span>
+        </label>
+      </form>
+
+    </article>
+  </section>
+
+</body>
+
+<script>
+  // Look for .hamburger
+  var hamburger = document.querySelector(".hamburger");
+  // On click
+  hamburger.addEventListener("click", function() {
+    // Toggle class "is-active"
+    hamburger.classList.toggle("is-active");
+    // Do something else, like open/close menu
+  });
+
+  //slider js
+  var sliderTrigger = document.getElementsByClassName("slider-trigger")[0];
+  var slider = document.getElementsByClassName('slider-parent')[0];
+  sliderTrigger.addEventListener("click", function(el) {
+    if (slider.classList.contains("active")) {
+      slider.classList.remove("active");
+    } else {
+      slider.classList.add("active");
+    }
+  });
+
+  // Dropdown js
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.dropdown-trigger');
+    var instances = M.Dropdown.init(elems);
+  });
+</script>
+<!-- Load materliaze js -->
+<script type="text/javascript" src="js/materialize.js"></script>
+
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>DiscoverDive</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <!--######################## Additional stylesheets here ########################-->
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+  integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+  crossorigin=""/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+
+        <!-- My stylesheets -->
+        <link rel="stylesheet" href="css/stylesheet.css">
+        <link rel="stylesheet" href="css/pageoverlay.css">
+        <link rel="stylesheet" href="css/leaflet-customisation.css">
+        <!--######################## End ########################-->
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+            <img src="./img/logo.png" alt="Site logo" id="siteLogo">
+
+            <!-- The container for any content to be displayed on the page in the center -->
+            <a href="#" id="refreshSitesButton" onclick="refreshSites()">Refresh Sites</a>
+
+            <div id="profileContainer" class="profileContainer">
+              <img id="profileImg" src="./img/profile-icon.png" onclick="toggleProfile()">
+              <nav>
+                <ul id='profileContents'>
+                  <a href="login.html" class="profileButton" id="loginButton"><li>Login</li></a>
+                  <a href="profile.html" class="profileButton" id="profilePageButton"><li>Profile</li></a>
+                  <a href="#" class="profileButton" id="logoutButton"><li>Logout</li></a>
+                </ul>
+              </nav>
+
+            </div>
+
+            <!--######################## Overlay ########################-->
+            <!-- The overlay -->
+<div id="diveSiteOverlay" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeDiveSiteOverlay()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+    <div class="w3-main mainContent">
+
+      <div class="w3-row padding-42">
+        <div class="imageCarousel" id="imageCarousel">
+
+        </div>
+        <button class="imageCarouselButton" onclick="plusDivs(-1)">&#10094;</button>
+        <button class="imageCarouselButton" onclick="plusDivs(+1)">&#10095;</button>
+        <div class="w3-container">
+          <h1 id="diveSiteTitle">Dive Site name</h1>
+          <p id="diveSiteDescription">Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <!-- <div class="w3-container overlayPhotosSection">
+          <h2 class="overlaySectionHeading">Photos</h2>
+          <div class="overlayPhotosContainer">
+
+          </div>
+        </div> -->
+
+        <div class="wr-container overlayReviewsSection">
+            <h2 class="overlaySectionHeading">Reviews</h2>
+            <button type="button" id="openReviewPanelBtn" name="openReviewPanelBtn" onclick="openReviewPanel()">Write a review</button>
+            <section id="overlayReviewsContainer" class="overlayReviewsContainer">
+            </section>
+        </div>
+
+        <form id="overlayReviewForm" action="index.html" method="post">
+          <h2 class="overlaySectionHeading">Write a review</h2>
+          <label for="rating" class="margin10">Rating(out of 5):
+            <input type="number" placeholder="0" name="rating" min="0.0" max="5.0" required>
+          </label>
+
+          <label for="review" class="margin10">Review
+            <textarea id="overlayReviewFormReviewArea" name="review" rows="10" cols="80" placeholder="Write review here..."></textarea>
+          </label>
+
+          <button type="submit" id="submitButton" class="margin10">Submit</button>
+        </form>
+      </div>
+  </div>
+
+</div>
+</div>
+
+            <!-- The map display div -->
+            <div id="mapid"></div>
+
+            <!--######################## Additional scripts here ########################-->
+            <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+    crossorigin=""></script>
+            <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+            <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+            <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+
+            <!-- My scripts -->
+            <script src="js/map.js"></script>
+            <script type="text/javascript" src="js/main.js"></script>
+            <script type="text/javascript" src="js/divesite.js"></script>
+
+
+    </body>
+</html>
