@@ -1,6 +1,6 @@
 /* TEMPORARY SETTING FOR DESIGN VISUALISATION */
 div, p, img, h3{
-  --border: 1px dotted black;
+  border: 1px dotted black;
 }
 /* END OF TEMPORARY SETTINGS */
 
@@ -94,6 +94,24 @@ footer {
 .event-details {
   flex: 1; /* child to fill available space */
 }
+
+/* PREDICTIONS */
+
+.card-predictions {
+  flex-direction: column;
+  flex: 1;
+}
+
+.stage-header {
+  flex: 1;
+  text-transform: uppercase;
+}
+
+.match-row {
+  justify-content: space-around;
+}
+
+
 
 
 
