@@ -1,3 +1,9 @@
+/* TEMPORARY SETTING FOR DESIGN VISUALISATION */
+div, p, img, h3{
+  --border: 1px dotted black;
+}
+/* END OF TEMPORARY SETTINGS */
+
 .flex-container {
   display: -webkit-flex;
   display: flex;
@@ -20,7 +26,6 @@ header, footer {
 
 #site_logo {
   height: 6rem;
-  --border: 1px solid black;
 }
 
 /* Header navbar style */
@@ -29,8 +34,7 @@ h1 {
 }
 
 .navigation {
-  margin-left: auto;
-  --flex-wrap: wrap;
+  margin-left: auto; /* nav links stick to the right */
 }
 
 .navigation div {
@@ -38,7 +42,6 @@ h1 {
   color: whitesmoke;
   text-align: right;
   text-transform: uppercase;
-  --border: 1px solid black;
 }
 
 .navigation div:hover {
@@ -48,23 +51,23 @@ h1 {
 .navigation a {
   color: whitesmoke;
   font-weight: bold;
-  white-space: nowrap;
+  white-space: nowrap; /* prevents menu name from wrapping internally */
 }
+
+/* Footer */
 
 footer {
-  margin-top: auto;
+  margin-top: auto; /* footer stick at the bottom of the page or is pushed further */
 }
 
-/* Main content*/
+/* MAIN CONTENT */
 .content {
-  border: 1px dotted black;
   margin: 40pt 65pt;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.content div {
-  border: 1px dotted black;
+.content-card {
   width: 47.5%;
   min-width: 40rem;
   max-width: 50rem;
@@ -72,16 +75,32 @@ footer {
 }
 
 /* Left card */
-#event_logo {
-  height: 15rem;
-}
-
 .card-left {
   flex-direction: row;
 }
 
+.next-event {
+  flex-direction: row;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 2%;
+  box-shadow: 5px 5px 5px #e8e8e8;
+}
 
-/* Responsive layout - tablet devices - stack menu and cards */
+.event-logo {
+  height: 18rem;
+  width: 18rem;
+}
+
+.event-details {
+  flex: 1; /* child to fill available space */
+}
+
+
+
+
+
+
+/* Responsive layout - tablet devices - stack menu */
 @media screen and (max-width: 60rem) {
   .navigation {
     flex-direction: column;
