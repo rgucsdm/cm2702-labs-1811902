@@ -3,28 +3,40 @@
   display: flex;
 }
 
-header {
+html, body {
+  height: 100%;
+}
+
+body {
+  flex-direction: column;
+}
+
+header, footer {
   background-color:rgb(95, 57, 98);
   color: whitesmoke;
   flex-direction: row;
   align-items: center;
 }
 
+#site_logo {
+  height: 6rem;
+  --border: 1px solid black;
+}
+
+/* Header navbar style */
 h1 {
   margin: auto 2rem;
 }
 
-#logo {
-  height: 50pt;
-  --border: 1px solid black;
-}
 .navigation {
   margin-left: auto;
+  --flex-wrap: wrap;
 }
+
 .navigation div {
   padding: 10px;
   color: whitesmoke;
-  text-align: center;
+  text-align: right;
   text-transform: uppercase;
   --border: 1px solid black;
 }
@@ -36,13 +48,53 @@ h1 {
 .navigation a {
   color: whitesmoke;
   font-weight: bold;
+  white-space: nowrap;
 }
 
-<!--nav buttons only - not used-->
+footer {
+  margin-top: auto;
+}
+
+/* Main content*/
+.content {
+  border: 1px dotted black;
+  margin: 40pt 65pt;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.content div {
+  border: 1px dotted black;
+  width: 47.5%;
+  min-width: 40rem;
+  max-width: 50rem;
+  margin-bottom: 2%;
+}
+
+/* Left card */
+#event_logo {
+  height: 15rem;
+}
+
+.card-left {
+  flex-direction: row;
+}
+
+
+/* Responsive layout - tablet devices - stack menu and cards */
+@media screen and (max-width: 60rem) {
+  .navigation {
+    flex-direction: column;
+  }
+}  
+
+
+
+/* nav buttons only - not used
 .btn-navigation {
   margin:0 auto;
   height: 100%;
   background-color:transparent;
   border-color:whitesmoke;
   border-radius:0;
-}
+}*/
