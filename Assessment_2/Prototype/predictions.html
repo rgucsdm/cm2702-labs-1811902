@@ -37,33 +37,92 @@
   <div class="content flex-container">
     <div class="card-predictions flex-container">
 
-
       <div class="stage-header flex-container">
-        <h2>Last 16</h2>
+        <h2>Last 16</h2>  
       </div>
+      
+      <!--Match 50-->
       <div class="match-row flex-container">
-        
-        <div>
+        <div class="match-date">
           <ul>
             <li>Saturday</li>
             <li>30-Jun</li>
             <li>3pm</li>
           </ul>
-        </div>
-        <div class="match-team">
-          Team 1
+        </div>    
+        <div class="match-team" id="match50-home">
+          <div class="flag">
+            <img src="http://www.geonames.org/flags/x/fr.gif">
+          </div>
+          France
         </div>
         <div class="match-prediction">
-          Win/Draw/Win
+          MAIN TIME RESULT
+          <div class="btn-group">
+            <button>Win</button>
+            <button>Draw</button>
+            <button>Win</button>
+          </div>
+            <select name="winner" id="match50-winner">
+              <option value="none">SELECT WINNER</option>
+              <option value="home">Home team</option>
+              <option value="away">Away team</option>
+            </select>  
         </div>
-        <div class="match-team">
-          Team 2
-        </div>
-        <div class="prediction-result">
-          Result
+        <div class="match-team" id="match50-away">
+          <div class="flag">
+            <img src="http://www.geonames.org/flags/x/ar.gif">
+          </div>
+          Argentina
         </div>
         
+        <div class="prediction-result">
+          <p>RESULT</p>
+          <p id="match50-result">TBC</p>
+        </div>
       </div>
+      
+      <!--Match 49 -->
+      <div class="match-row flex-container">
+        <div class="match-date">
+          <ul>
+            <li>Saturday</li>
+            <li>30-Jun</li>
+            <li>7pm</li>
+          </ul>
+        </div>    
+        <div class="match-team" id="match49-home">
+          <div class="flag">
+            <img src="http://www.geonames.org/flags/x/uy.gif">
+          </div>
+          Uruguay
+        </div>
+        <div class="match-prediction">
+          MAIN TIME RESULT
+          <div class="btn-group">
+            <button>Win</button>
+            <button>Draw</button>
+            <button>Win</button>
+          </div>
+            <select name="winner" id="match50winner">
+              <option value="none">SELECT WINNER</option>
+              <option value="home">Home team</option>
+              <option value="away">Away team</option>
+            </select>  
+        </div>
+        <div class="match-team" id="match49-away">
+          <div class="flag">
+            <img src="http://www.geonames.org/flags/x/pt.gif">
+          </div>
+          Portugal
+        </div>
+        
+        <div class="prediction-result">
+          <p>RESULT</p>
+          <p id="match49-result">TBC</p>
+        </div>
+      </div>
+      
     </div>
   </div>
 

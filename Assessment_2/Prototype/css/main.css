@@ -1,9 +1,17 @@
 /* TEMPORARY SETTING FOR DESIGN VISUALISATION */
 div, p, img, h3{
-  border: 1px dotted black;
+  --border: 1px dotted black;
 }
-/* END OF TEMPORARY SETTINGS */
+/* ------------------------- */
 
+/* MILLIGRAM CUSTOMISATION */
+button {
+  background-color: rgb(95, 57, 98);
+  border-color: rgb(95, 57, 98);
+}
+/* ------------------------- */
+
+/* general style */
 .flex-container {
   display: -webkit-flex;
   display: flex;
@@ -60,7 +68,7 @@ footer {
   margin-top: auto; /* footer stick at the bottom of the page or is pushed further */
 }
 
-/* MAIN CONTENT */
+/* HOME CONTENT */
 .content {
   margin: 40pt 65pt;
   flex-wrap: wrap;
@@ -100,21 +108,43 @@ footer {
 .card-predictions {
   flex-direction: column;
   flex: 1;
+  box-shadow: 5px 5px 5px #e8e8e8;
 }
 
 .stage-header {
+  background-color: rgb(69, 41, 71);
+  color: white;
   flex: 1;
   text-transform: uppercase;
+  padding-left: 0.8rem;
 }
 
 .match-row {
+  padding-top: 1.5rem;
   justify-content: space-around;
+  text-align: center;
+  border: 1px solid #dcdcdc;
 }
 
+.match-row:not(:last-child) {
+  border-bottom: none; /* prevent double borders */
+}
 
+.match-date li {
+  list-style: none;
+}
 
+.flag {
+  width: 10rem;
+}
 
+.match-prediction {
+  font-weight: bold;
+}
 
+.match-prediction select {
+  margin-bottom: 1rem;
+}
 
 
 
