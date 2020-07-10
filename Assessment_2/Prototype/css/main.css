@@ -1,6 +1,6 @@
 /* TEMPORARY SETTING FOR DESIGN VISUALISATION */
-div, p, img, h3{
-  --border: 1px dotted black;
+div, p, img, h3, table, th, td{
+  border: 1px dotted black;
 }
 /* ------------------------- */
 
@@ -9,6 +9,19 @@ button {
   background-color: rgb(95, 57, 98);
   border-color: rgb(95, 57, 98);
 }
+
+table {
+  text-align: center;
+}
+
+th {
+  vertical-align: bottom;
+  border-bottom: 0.2rem solid;
+}
+/*a {
+  text-decoration: underline;
+  color: rgb(69, 41, 71);
+}*/
 /* ------------------------- */
 
 /* general style */
@@ -32,7 +45,7 @@ header, footer {
   align-items: center;
 }
 
-#site_logo {
+.site_logo {
   height: 6rem;
 }
 
@@ -73,6 +86,7 @@ footer {
   margin: 40pt 65pt;
   flex-wrap: wrap;
   justify-content: space-around;
+  --min-width: min-content;
 }
 
 .content-card {
@@ -101,6 +115,11 @@ footer {
 
 .event-details {
   flex: 1; /* child to fill available space */
+}
+
+.event-details a {
+  text-decoration: underline;
+  color: rgb(69, 41, 71);
 }
 
 /* PREDICTIONS */
@@ -157,27 +176,70 @@ footer {
 }
 
 
+/* LEADERBOARD */
 
-/* Responsive layout - tablet devices - stack menu */
+.table {
+  overflow-x: auto;
+}
+thead {
+  
+}
+
+th:first-child {
+  padding-left: 0.5rem;
+  --text-align: center;
+}
+
+th:nth-child(2), td:nth-child(2) {
+  padding-left: 0;
+  text-align: left;
+}
+
+th:last-child, td:last-child {
+  padding-right: 1.5rem;
+}
+
+.subheader td {
+  border-bottom: 0.1rem solid rgb(96, 108, 118);
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+tbody {
+  white-space: nowrap;
+}
+
+.sticky-column {
+  position: sticky;
+  position: -webkit-sticky;
+  background-color: white;
+
+}
+
+.first-column {
+  left: 0;
+}
+
+.second-column {
+  right: 0;
+}
+
+/* Responsive layout - mobile and tablet devices */
 @media screen and (max-width: 60rem) {
+  
+  /* Stack navigation */
   .navigation {
     flex-direction: column;
   }
   
+  /* Prediction - re-order buttons */
   .btn-group {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
   }
+}
 
-
-
-
-/* nav buttons only - not used
-.btn-navigation {
-  margin:0 auto;
-  height: 100%;
-  background-color:transparent;
-  border-color:whitesmoke;
-  border-radius:0;
-}*/
