@@ -1,6 +1,6 @@
 /* TEMPORARY SETTING FOR DESIGN VISUALISATION */
 div, p, img, h3, table, th, td{
-  border: 1px dotted black;
+  --border: 1px dotted black;
 }
 /* ------------------------- */
 
@@ -172,7 +172,7 @@ footer {
 
 .match-prediction select {
   margin-bottom: 1rem;
-  --display: none; /* only displayed when DRAW button is selected */
+  visibility: hidden; /* only displayed when DRAW button is selected */
 }
 
 

@@ -11,8 +11,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
 
-  <!-- CSS Stylesheets -->
+  <!--CSS Stylesheets-->
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  
+  <!--Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
 
 </head>
 
@@ -59,10 +63,19 @@
         <div class="match-prediction">
           MAIN TIME RESULT
           <div class="btn-group">
+            <input type="radio" id="home" name="match50-prediction" value="home">
+            <label for="home">WIN</label>
+            <input type="radio" id="none" name="match50-prediction" value="draw">
+            <label for="none">DRAW</label>
+            <input type="radio" id="away" name="match50-prediction" value="away">
+            <label for="away">WIN</label>
+          </div>
+          
+          <!--<div class="btn-group" data-toggle="buttons">
             <button>Win</button>
             <button>Draw</button>
             <button>Win</button>
-          </div>
+          </div>-->
             <select name="winner" id="match50-winner">
               <option value="none">SELECT WINNER</option>
               <option value="home">Home team</option>
@@ -99,12 +112,12 @@
         </div>
         <div class="match-prediction">
           MAIN TIME RESULT
-          <div class="btn-group">
+          <div class="btn-group" data-toggle="buttons">
             <button>Win</button>
             <button>Draw</button>
             <button>Win</button>
           </div>
-            <select name="winner" id="match50winner">
+            <select name="winner" id="match49winner">
               <option value="none">SELECT WINNER</option>
               <option value="home">Home team</option>
               <option value="away">Away team</option>
