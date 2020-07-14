@@ -249,6 +249,19 @@ tbody {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
+    --justify-content: center;
+    --flex-direction: row;
+    --flex-wrap: wrap;
   }
-}
+  
+  /*
+  .btn-group button {
+    flex: 1 0 50%;
+  }
+ 
+  button[name=Draw] {
+    order: 2;
+    flex: 1 0 100%;
+  }
+}*/
 
