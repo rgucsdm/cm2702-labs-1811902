@@ -170,6 +170,11 @@ footer {
   white-space: nowrap;
 }
 
+.selected {
+  background-color: rgb(96, 108, 118);
+  border-color: rgb(96, 108, 118);
+}
+
 .match-prediction select {
   margin-bottom: 1rem;
   visibility: hidden; /* only displayed when DRAW button is selected */

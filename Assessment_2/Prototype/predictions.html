@@ -46,7 +46,7 @@
       </div>
       
       <!--Match 50-->
-      <div class="match-row flex-container">
+      <div class="match-row flex-container" id="match50">
         <div class="match-date">
           <ul>
             <li>Saturday</li>
@@ -56,26 +56,26 @@
         </div>    
         <div class="match-team" id="match50-home">
           <div class="flag">
-            <img src="http://www.geonames.org/flags/x/fr.gif">
+            <img src="https://www.geonames.org/flags/x/fr.gif">
           </div>
           France
         </div>
-        <div class="match-prediction">
+        <div class="match-prediction" id="match50-prediction">
           MAIN TIME RESULT
-          <div class="btn-group">
+          <!--<div class="btn-group">
             <input type="radio" id="home" name="match50-prediction" value="home">
             <label for="home">WIN</label>
             <input type="radio" id="none" name="match50-prediction" value="draw">
             <label for="none">DRAW</label>
             <input type="radio" id="away" name="match50-prediction" value="away">
             <label for="away">WIN</label>
-          </div>
-          
-          <!--<div class="btn-group" data-toggle="buttons">
-            <button>Win</button>
-            <button>Draw</button>
-            <button>Win</button>
           </div>-->
+          
+          <div class="btn-group">
+            <button name="Home">Win</button>
+            <button name="Draw">Draw</button>
+            <button name="Away">Win</button>
+          </div>
             <select name="winner" id="match50-winner">
               <option value="none">SELECT WINNER</option>
               <option value="home">Home team</option>
@@ -84,19 +84,19 @@
         </div>
         <div class="match-team" id="match50-away">
           <div class="flag">
-            <img src="http://www.geonames.org/flags/x/ar.gif">
+            <img src="https://www.geonames.org/flags/x/ar.gif">
           </div>
           Argentina
         </div>
         
-        <div class="prediction-result">
+        <div class="match-result">
           <p>RESULT</p>
           <p id="match50-result">TBC</p>
         </div>
       </div>
       
       <!--Match 49 -->
-      <div class="match-row flex-container">
+      <div class="match-row flex-container" id="match49">
         <div class="match-date">
           <ul>
             <li>Saturday</li>
@@ -106,16 +106,16 @@
         </div>    
         <div class="match-team" id="match49-home">
           <div class="flag">
-            <img src="http://www.geonames.org/flags/x/uy.gif">
+            <img src="https://www.geonames.org/flags/x/uy.gif">
           </div>
           Uruguay
         </div>
-        <div class="match-prediction">
+        <div class="match-prediction" id="match49-prediction">
           MAIN TIME RESULT
-          <div class="btn-group" data-toggle="buttons">
-            <button>Win</button>
-            <button>Draw</button>
-            <button>Win</button>
+          <div class="btn-group">
+            <button name="Home">Win</button>
+            <button name="Draw">Draw</button>
+            <button name="Away">Win</button>
           </div>
             <select name="winner" id="match49winner">
               <option value="none">SELECT WINNER</option>
@@ -125,12 +125,12 @@
         </div>
         <div class="match-team" id="match49-away">
           <div class="flag">
-            <img src="http://www.geonames.org/flags/x/pt.gif">
+            <img src="https://www.geonames.org/flags/x/pt.gif">
           </div>
           Portugal
         </div>
         
-        <div class="prediction-result">
+        <div class="match-result">
           <p>RESULT</p>
           <p id="match49-result">TBC</p>
         </div>
