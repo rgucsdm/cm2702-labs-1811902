@@ -150,6 +150,10 @@ footer {
   border-bottom: none; /* prevent double borders */
 }
 
+.match-date {
+  width: 8rem;
+}
+
 .match-date li {
   list-style: none;
 }
