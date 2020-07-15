@@ -130,12 +130,29 @@ footer {
   box-shadow: 5px 5px 5px #e8e8e8;
 }
 
+.stage {
+  flex-direction: column;
+  flex: 1;
+}
+
 .stage-header {
   background-color: rgb(69, 41, 71);
   color: white;
   flex: 1;
+  justify-content: space-between;
   text-transform: uppercase;
   padding-left: 0.8rem;
+  cursor: pointer;
+}
+
+.stage-header:after {
+  content: "\2796";
+  padding-right: 0.8rem;
+  padding-top: 0.8rem;
+}
+
+.closed:after {
+  content: '\02795';
 }
 
 .match-row {
@@ -164,6 +181,12 @@ footer {
 
 .flag {
   width: 10rem;
+  height: 6.66rem;
+}
+
+.flag img {
+  height: 100%;
+  object-fit: cover; /* clipped to fit while maintaining ratio */
 }
 
 .match-prediction {

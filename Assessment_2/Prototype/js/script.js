@@ -11,6 +11,17 @@ $(function() {
     getDrawWinner(event.target);
   });
   
+  /* Stages - accordion effect */
+  $(".stage-header").click(function() {
+    $(this).toggleClass("closed");
+    $(this).siblings().each(function() {
+      if($(this).is(":hidden")){
+        console.log("Hidden");
+      }
+      $(this).slideToggle();
+    });   
+  });
+  
 
   
 
@@ -58,7 +69,7 @@ function setPrediction(btnClicked) {
   else {
     hideDraw(btnClicked, matchID);
     populateNextStage(matchID, getWinner(btnClicked, matchID));
-  }
+  }  
 }
 
 /* Styles selected prediction button */
@@ -75,7 +86,6 @@ function styleSelectedButton(btnClicked, matchID) {
 function displayDraw(btnClicked, matchID) {
   populateDrawTeams(matchID);
   $("#" + matchID).find("select").css("visibility", "visible");
-
   console.log("home value is: "+ $("#" + matchID).find("select option[value='home']").html()); //temporary test
   console.log("away value is: "+ $("#" + matchID).find("select option[value='away']").html()); //temporary test
 }
@@ -121,6 +131,7 @@ function getDrawWinner(optionSelected){
   console.log("You say "+ winner +" will win in ET in " + matchID); // temporary test
 }
 
+
 /* Populate further stages based on last16 predictions */
 function populateNextStage(matchID, winner) {
   switch(matchID) {
@@ -136,10 +147,29 @@ function populateNextStage(matchID, winner) {
     case "match58": $("#match61").find(".away-team>p").html(winner); break;
     case "match59": $("#match62").find(".home-team>p").html(winner); break;
     case "match60": $("#match62").find(".away-team>p").html(winner); break;
-    case "match61": $("#final").find(".home-team>p").html(winner); break;
-    case "match62": $("#final").find(".away-team>p").html(winner); break;  
+    case "match61":
+      $("#final").find(".home-team>p").html(winner);
+      $("#3rdplace").find(".home-team>p").html(getLoser(matchID, winner));
+      break;
+    case "match62":
+      $("#final").find(".away-team>p").html(winner);
+      $("#3rdplace").find(".away-team>p").html(getLoser(matchID, winner));
+      break;
     default: console.log("not yet defined");
   };
 }
+
+/* Returns loser of a given match */
+function getLoser(matchID, winner) {
+  var loser;
+  if(winner == getHomeTeam(matchID)) {
+    loser = getAwayTeam(matchID);
+  }
+  else {
+    loser = getHomeTeam(matchID);
+  }
+  return loser;
+}
+
 
 
