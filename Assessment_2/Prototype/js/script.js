@@ -1,32 +1,67 @@
 $(function() {
   
+  /* EFFECTS */
+  
+  /* Match stages - accordion effect */
+  $(".stage-header").click(function() {
+    collapse(event.target);
+  });
+  
+  /* LOGIN/REGISTER */
+  
+  /* Check if passwords match */
+  $("#new-password, #confirm-password").keyup(function() {
+    matchPasswords();
+  });
+  
   /* PREDICTIONS */
   
   /* Assign events to buttons */
+  /* Match prediction buttons */
   $(".btn-group>button").click(function() {
     setPrediction(event.target);
   });
   
-  $("select").change(function() {
+  /* Draw assist prediction */
+  $("select[name='draw-winner']").change(function() {
     getDrawWinner(event.target);
   });
   
-  /* Stages - accordion effect */
-  $(".stage-header").click(function() {
-    $(this).toggleClass("closed");
-    $(this).siblings().each(function() {
-      if($(this).is(":hidden")){
-        console.log("Hidden");
-      }
-      $(this).slideToggle();
-    });   
-  });
+  /* Submit predictions */
+  //$("#submit-predictions").cl
   
-
   
-
+  
 }); /* end of document ready */
 
+/* EFFECTS */
+
+function collapse(headerClicked) {
+  $(headerClicked).toggleClass("closed");
+  $(headerClicked).siblings().each(function() {
+    if($(this).is(":hidden")) {
+      console.log("Hidden");
+    }
+    $(this).slideToggle();
+  });
+}
+
+/* LOGIN/REGISTER */
+
+/* Check if passwords match */
+function matchPasswords() {
+  if($("#new-password").val() == $("#confirm-password").val()) {
+    $("#new-password").css("borderColor", "green");
+    $("#confirm-password").css("borderColor", "green");
+    console.log("passwords match");
+  } else {
+    $("#new-password").css("borderColor", "red");
+    $("#confirm-password").css("borderColor", "red");
+    console.log("passwords don't match");
+  }
+}
+
+/* PREDICTION LOGIC */
 
 /* Returns home team of a given match */
 function getHomeTeam(matchID) {
@@ -56,11 +91,10 @@ function getSelectedTeam(matchID){
   return winner;
 }
 
-/* SET MATCH WINNER PREDICTION */
-
+/* Set match winner */
 function setPrediction(btnClicked) {
   var matchID = $(btnClicked).closest(".match-row").attr("id");
-  console.log("clicked " + btnClicked.name + " in " + matchID); // temporary test
+  //console.log("clicked " + btnClicked.name + " in " + matchID); // temporary test
   styleSelectedButton(btnClicked, matchID);
   if(btnClicked.name == "Draw") {
     displayDraw(btnClicked, matchID);
@@ -86,8 +120,8 @@ function styleSelectedButton(btnClicked, matchID) {
 function displayDraw(btnClicked, matchID) {
   populateDrawTeams(matchID);
   $("#" + matchID).find("select").css("visibility", "visible");
-  console.log("home value is: "+ $("#" + matchID).find("select option[value='home']").html()); //temporary test
-  console.log("away value is: "+ $("#" + matchID).find("select option[value='away']").html()); //temporary test
+  //console.log("home value is: "+ $("#" + matchID).find("select option[value='home']").html()); //temporary test
+  //console.log("away value is: "+ $("#" + matchID).find("select option[value='away']").html()); //temporary test
 }
 
 /* Hide "select winner" option when DRAW is not selected */
@@ -102,7 +136,7 @@ function populateDrawTeams(matchID) {
   $("#" + matchID).find("select option[value='away']").html(getAwayTeam(matchID));
 }
 
-/* Determine match winner - in main time */
+/* Returns match winner - in main time */
 function getWinner(btnClicked, matchID) {
   var winner = "Country";
   if(btnClicked.name == "Home") {
@@ -110,11 +144,11 @@ function getWinner(btnClicked, matchID) {
   } else if(btnClicked.name == "Away") {
     winner = getAwayTeam(matchID);
   };
-  console.log("You said " + winner + " will win " + matchID); //temporary test
+  //console.log("You said " + winner + " will win " + matchID); //temporary test
   return winner; 
 }
 
-/* Determine match winner - in extra time */
+/* Returns match winner - in extra time */
 function getDrawWinner(optionSelected){
   var matchID = $(optionSelected).closest(".match-row").attr("id");
   var winner = "Country";
@@ -128,11 +162,22 @@ function getDrawWinner(optionSelected){
     winner = "Country";
   };
   populateNextStage(matchID, winner);  
-  console.log("You say "+ winner +" will win in ET in " + matchID); // temporary test
+  //console.log("You say "+ winner +" will win in ET in " + matchID); // temporary test
 }
 
+/* Returns loser of a given match */
+function getLoser(matchID, winner) {
+  var loser;
+  if(winner == getHomeTeam(matchID)) {
+    loser = getAwayTeam(matchID);
+  }
+  else {
+    loser = getHomeTeam(matchID);
+  }
+  return loser;
+}
 
-/* Populate further stages based on last16 predictions */
+/* Populate further stages based on chosen predictions */
 function populateNextStage(matchID, winner) {
   switch(matchID) {
     case "match49": $("#match57").find(".home-team>p").html(winner); break;
@@ -155,21 +200,11 @@ function populateNextStage(matchID, winner) {
       $("#final").find(".away-team>p").html(winner);
       $("#3rdplace").find(".away-team>p").html(getLoser(matchID, winner));
       break;
-    default: console.log("not yet defined");
+    //default: console.log("not yet defined");
   };
 }
 
-/* Returns loser of a given match */
-function getLoser(matchID, winner) {
-  var loser;
-  if(winner == getHomeTeam(matchID)) {
-    loser = getAwayTeam(matchID);
-  }
-  else {
-    loser = getHomeTeam(matchID);
-  }
-  return loser;
-}
+
 
 
 

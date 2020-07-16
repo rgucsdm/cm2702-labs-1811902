@@ -1,13 +1,17 @@
 /* TEMPORARY SETTING FOR DESIGN VISUALISATION */
-div, p, img, h3, table, th, td{
+div, p, img, h3, form, table, th, td{
   --border: 1px dotted black;
 }
 /* ------------------------- */
 
 /* MILLIGRAM CUSTOMISATION */
-button {
+button, input[type="submit"] {
   background-color: rgb(95, 57, 98);
   border-color: rgb(95, 57, 98);
+}
+
+:focus {
+  border-color: rgb(95, 57, 98) !important;
 }
 
 table {
@@ -18,13 +22,9 @@ th {
   vertical-align: bottom;
   border-bottom: 0.2rem solid;
 }
-/*a {
-  text-decoration: underline;
-  color: rgb(69, 41, 71);
-}*/
 /* ------------------------- */
 
-/* general style */
+/* GENERAL STYLE */
 .flex-container {
   display: -webkit-flex;
   display: flex;
@@ -82,11 +82,11 @@ footer {
 }
 
 /* HOME CONTENT */
+
 .content {
   margin: 40pt 65pt;
   flex-wrap: wrap;
   justify-content: space-around;
-  --min-width: min-content;
 }
 
 .content-card {
@@ -98,7 +98,7 @@ footer {
 
 /* Left card */
 .card-left {
-  flex-direction: row;
+  --flex-direction: row;
 }
 
 .next-event {
@@ -121,13 +121,33 @@ footer {
   text-decoration: underline;
   color: rgb(69, 41, 71);
 }
+/* ------------------------- */
+
+/* LOGIN/REGISTER */
+
+.form-user-access {
+  border: 1px solid #dcdcdc;
+  box-shadow: 5px 5px 5px #e8e8e8;
+  padding: 0.8rem;
+}
+/* ------------------------- */
 
 /* PREDICTIONS */
+
+.content-predictions {
+  flex-direction: column;
+}
 
 .card-predictions {
   flex-direction: column;
   flex: 1;
   box-shadow: 5px 5px 5px #e8e8e8;
+}
+
+.submit-predictions {
+  justify-content: flex-end;
+  flex: 1;
+  padding: 2.5rem 0.8rem 0;
 }
 
 .stage {
@@ -143,6 +163,10 @@ footer {
   text-transform: uppercase;
   padding-left: 0.8rem;
   cursor: pointer;
+}
+
+.stage-header:hover {
+  background-color: rgb(95, 57, 98);
 }
 
 .stage-header:after {
@@ -167,7 +191,7 @@ footer {
   border-bottom: none; /* prevent double borders */
 }
 
-.match-date {
+.match-date, .match-result {
   width: 8rem;
 }
 
@@ -204,9 +228,18 @@ footer {
 
 .match-prediction select {
   margin-bottom: 1rem;
-  visibility: hidden; /* only displayed when DRAW button is selected */
+  visibility: hidden; /* only displayed when DRAW button is selected - JS */
 }
 
+#finalists {
+  font-weight: bold;
+  flex-direction: column;
+}
+
+#finalists select:not(:last-child) {
+  margin-right: 0.5rem;
+}
+/* ------------------------- */
 
 /* LEADERBOARD */
 
@@ -258,8 +291,11 @@ tbody {
 .second-column {
   right: 0;
 }
+/* ------------------------- */
 
-/* Responsive layout - mobile and tablet devices */
+/* RESPONSIVE LAYOUT */
+
+/* mobile and tablet devices */
 @media screen and (max-width: 60rem) {
   
   /* Stack navigation */
@@ -277,14 +313,9 @@ tbody {
     --flex-wrap: wrap;
   }
   
-  /*
-  .btn-group button {
-    flex: 1 0 50%;
+  #finalists-prediction {
+    flex-direction: column;
   }
- 
-  button[name=Draw] {
-    order: 2;
-    flex: 1 0 100%;
-  }
-}*/
+} // end of media screen
+
 
