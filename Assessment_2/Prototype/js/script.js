@@ -28,7 +28,7 @@ $(function() {
   });
   
   /* Submit predictions */
-  //$("#submit-predictions").cl
+  
   
   
   
