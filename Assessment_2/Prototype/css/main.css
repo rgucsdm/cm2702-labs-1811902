@@ -81,7 +81,7 @@ footer {
   margin-top: auto; /* footer stick at the bottom of the page or is pushed further */
 }
 
-/* HOME CONTENT */
+/* Content */
 
 .content {
   margin: 40pt 65pt;
@@ -96,10 +96,9 @@ footer {
   margin-bottom: 2%;
 }
 
+/* HOME CONTENT */
+
 /* Left card */
-.card-left {
-  --flex-direction: row;
-}
 
 .next-event {
   flex-direction: row;
@@ -134,7 +133,7 @@ footer {
 
 /* PREDICTIONS */
 
-.content-predictions {
+.content-column {
   flex-direction: column;
 }
 
