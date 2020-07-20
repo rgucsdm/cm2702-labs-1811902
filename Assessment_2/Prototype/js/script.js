@@ -36,7 +36,8 @@ $(function() {
 
 /* EFFECTS */
 
-function collapse(headerClicked) {
+function collapse(areaClicked) {
+  var headerClicked = $(areaClicked).closest(".stage-header").get(0); //child event acts like parent
   $(headerClicked).toggleClass("closed");
   $(headerClicked).siblings().each(function() {
     if($(this).is(":hidden")) {
