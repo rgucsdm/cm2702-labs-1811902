@@ -1,0 +1,795 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>My predictions</title>
+
+  <!--CSS frameworks-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
+
+  <!--CSS Stylesheets-->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  
+  <!--Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
+
+</head>
+
+<body class="flex-container">
+
+  <header class="flex-container">
+    <img class="site_logo" src="./images/acc_crest.png" title="Home">
+    <h1>MY PREDICTIONS</h1>
+    <div class="navigation flex-container">
+      <div>
+        <a href="./index.html">Home</a>
+      </div>
+      <div>
+        <a href="./predictions.html">Predictions</a>
+      </div>
+      <div>
+        <a href="./login.html">Log in</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="content content-column flex-container">
+    
+    <div class="card-predictions flex-container">
+      
+      <!-- LAST 16 --> 
+      <div class="stage flex-container">
+
+        <div class="stage-header flex-container">
+          <h2>Last 16</h2>  
+        </div>
+
+        <!--Match 50-->
+        <div class="match-row flex-container" id="match50">
+          <div class="match-date">
+            <ul>
+              <li>Saturday</li>
+              <li>30-Jun</li>
+              <li>3pm</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="https://www.geonames.org/flags/x/fr.gif">
+            </div>
+            <p>France</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="https://www.geonames.org/flags/x/ar.gif">
+            </div>
+            <p>Argentina</p>
+          </div>   
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 49 -->
+        <div class="match-row flex-container" id="match49">
+          <div class="match-date">
+            <ul>
+              <li>Saturday</li>
+              <li>30-Jun</li>
+              <li>7pm</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="https://www.geonames.org/flags/x/uy.gif">
+            </div>
+            <p>Uruguay</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="https://www.geonames.org/flags/x/pt.gif">
+            </div>
+            <p>Portugal</p>
+          </div>
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 51-->
+        <div class="match-row flex-container" id="match51">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 52-->
+        <div class="match-row flex-container" id="match52">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 53-->
+        <div class="match-row flex-container" id="match53">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 54-->
+        <div class="match-row flex-container" id="match54">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 55-->
+        <div class="match-row flex-container" id="match55">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 56-->
+        <div class="match-row flex-container" id="match56">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+     
+      </div>
+        
+      <!-- QUARTER-FINALS -->    
+      <div class="stage flex-container">
+      
+        <div class="stage-header flex-container">
+          <h2>Quarter-finals</h2>   
+        </div>
+
+        <!--Match 57-->
+        <div class="match-row flex-container" id="match57">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 58-->
+        <div class="match-row flex-container" id="match58">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 60-->
+        <div class="match-row flex-container" id="match60">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 59-->
+        <div class="match-row flex-container" id="match59">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+      
+      </div>
+      
+      <!-- SEMI-FINALS -->  
+      <div class="stage flex-container">
+      
+        <div class="stage-header flex-container">
+          <h2>Semi-finals</h2>  
+        </div>
+
+        <!--Match 61-->
+        <div class="match-row flex-container" id="match61">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+
+        <!--Match 62-->
+        <div class="match-row flex-container" id="match62">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+      
+      </div>
+        
+      <!-- THIRD PLACE -->
+      <div class="stage flex-container">
+        
+        <div class="stage-header flex-container">
+          <h2>Third place</h2>  
+        </div>
+
+        <!--Third place-->
+        <div class="match-row flex-container" id="3rdplace">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+      
+      </div>
+      
+      <!-- FINAL -->  
+      <div class="stage flex-container">
+        
+        <div class="stage-header flex-container">
+          <h2>Final</h2>  
+        </div>
+
+        <!--Final-->
+        <div class="match-row flex-container" id="final">
+          <div class="match-date">
+            <ul>
+              <li>Day</li>
+              <li>Date</li>
+              <li>Time</li>
+            </ul>
+          </div>    
+          <div class="match-team home-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>
+          <div class="match-prediction">
+            MAIN TIME RESULT
+            <div class="btn-group">
+              <button name="Home">Win</button>
+              <button name="Draw">Draw</button>
+              <button name="Away">Win</button>
+            </div>
+              <select name="draw-winner">
+                <option value="none">SELECT WINNER</option>
+                <option value="home">Home team</option>
+                <option value="away">Away team</option>
+              </select>  
+          </div>
+          <div class="match-team away-team">
+            <div class="flag">
+              <img src="./images/flag_placeholder.png">
+            </div>
+            <p>Country</p>
+          </div>      
+          <div class="match-result">
+            <p>RESULT</p>
+            <p>TBC</p>
+          </div>
+        </div>
+        
+        <!--Finalists-->
+        <div class="match-row flex-container" id="finalists">
+          <p>FINALISTS AND WINNER</p>
+          
+          <div class="flex-container" id="finalists-prediction">
+            <select name="finalist1" id="finalist1">
+              <option value="none">SELECT FINALIST</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+            </select>
+
+            <select name="finalist2">
+              <option value="none">SELECT FINALIST</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+            </select>
+
+            <select name="champion" id="champion">
+              <option value="none">SELECT WINNER</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+              <option>Team</option>
+            </select>
+          </div>
+          
+        </div>
+          
+      </div>
+      
+    </div>
+    
+    <div class="submit-predictions flex-container">
+        <button id="submit-predictions">Submit predictions</button>
+    </div>
+    
+  </div>
+
+  <footer class="flex-container">
+    <img class="site_logo" src="./images/acc_crest.png" title="Home">
+  </footer>
+</body>
+
+</html>
