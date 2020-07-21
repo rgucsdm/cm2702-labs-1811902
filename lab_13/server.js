@@ -27,3 +27,16 @@ app.get("/add", function(req, res){
   var y = parseInt(req.query.y);
   res.send("X + Y="+(x+y));
 });
+
+/* Calculator */
+app.get("/calc", function(req, res){
+  var x = parseInt(req.query.x);
+  var y = parseInt(req.query.y);
+  var op = req.query.op;
+  var result = 0;
+  if(op=="add") {result = x+y};
+  if(op=="sub") {result = x-y};
+  if(op=="mul") {result = x*y};
+  if(op=="div") {result = x/y};
+  res.send("Result is "+ result);
+});
