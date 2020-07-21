@@ -1,0 +1,12 @@
+{
+  "name": "lab_13",
+  "version": "1.0.0",
+  "description": "Lab 13 - Express",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Eleonora Kapsule",
+  "license": "ISC"
+}
