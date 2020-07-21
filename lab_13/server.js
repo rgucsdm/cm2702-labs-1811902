@@ -14,7 +14,16 @@ app.get("/test", function(req, res) {
 });
 
 /* Knock-knock jokes */
+var knockknock = require("knock-knock-jokes");
+
 app.get("/joke", function(req, res) {
   var randomJoke = knockknock();
   res.send(randomJoke);
+});
+
+/* Accessing parameters */
+app.get("/add", function(req, res){
+  var x = req.query.x;
+  var y = req.query.y;
+  res.send("X + Y = " + (x+y));
 });

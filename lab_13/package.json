@@ -8,5 +8,8 @@
     "start": "node server.js"
   },
   "author": "Eleonora Kapsule",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "knock-knock-jokes": "^1.7.0"
+  }
 }
