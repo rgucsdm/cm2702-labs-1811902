@@ -12,3 +12,9 @@ app.listen(8080);
 app.get("/test", function(req, res) {
   res.send("Hello world! by express - via Route 2");
 });
+
+/* Knock-knock jokes */
+app.get("/joke", function(req, res) {
+  var randomJoke = knockknock();
+  res.send(randomJoke);
+});
