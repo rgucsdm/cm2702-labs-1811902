@@ -19,7 +19,7 @@ MongoClient.connect(url, function(err, database) {
 /* Add new user to the db */
 app.post("/register", function(req, res) {
   var user = req.body.username;
-  if(db.collection("user").find({username:user})) {
+  if(db.collection("user").find({username:user}).count() > 0) {
     alert("You have already registered");
   } 
   else {
