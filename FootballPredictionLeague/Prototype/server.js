@@ -25,7 +25,7 @@ app.post("/register", function(req, res) {
   else {
     db.collection("user").save(req.body, function(err, result) {
       if(err) throw err;
-      console.log("New user "+ user " added succesfully);
+      console.log("New user "+ user " added succesfully");
       res.redirect("/");
     });
   };
