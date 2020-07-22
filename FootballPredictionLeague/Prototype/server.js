@@ -20,15 +20,17 @@ MongoClient.connect(url, function(err, database) {
 app.post("/register", function(req, res) {
   var user = req.body.username;
   if(db.collection("user").find({username:user}).count() > 0) {
-    alert("You have already registered");
+    console.log("You have already registered");
   } 
   else {
-    db.collection("user").save(req.body, function(err, result) {
+    /*db.collection("user").save(req.body, function(err, result) {
       if(err) throw err;
       console.log("New user " + user + " added succesfully");
       res.redirect("/");
-    });
+    });*/
+    console.log("Adding new user");
   };
+  
 });
 
 
