@@ -98,7 +98,6 @@ footer {
 
 /* HOME CONTENT */
 
-/* Left card */
 
 .next-event {
   flex-direction: row;
@@ -119,6 +118,13 @@ footer {
 .event-details a {
   text-decoration: underline;
   color: rgb(69, 41, 71);
+}
+
+#twitter-feed{
+  border: 1px solid #dcdcdc;
+  box-shadow: 5px 5px 5px #e8e8e8;
+  max-height: 60rem;
+  overflow: auto;
 }
 /* ------------------------- */
 
