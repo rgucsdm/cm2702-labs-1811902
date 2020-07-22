@@ -22,7 +22,7 @@ app.post("/register", function(req, res) {
   console.log("You are adding another " + user);
   db.collection("user").save(req.body, function(err, result) {
     if(err) throw err;
-    console.log("User added");
+    console.log("User added again" + user);
     res.redirect("/");
   });
 });
