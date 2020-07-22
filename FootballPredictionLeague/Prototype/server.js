@@ -19,12 +19,16 @@ MongoClient.connect(url, function(err, database) {
 /* Add new user to the db */
 app.post("/register", function(req, res) {
   var user = req.body.username;
-  console.log("You are adding another " + user);
-  db.collection("user").save(req.body, function(err, result) {
-    if(err) throw err;
-    console.log("User added again" + user);
-    res.redirect("/");
-  });
+  if(db.collection("user").find({username:user})) {
+    alert("You have already registered");
+  } 
+  else {
+    db.collection("user").save(req.body, function(err, result) {
+      if(err) throw err;
+      console.log("New user "+ user " added succesfully);
+      res.redirect("/");
+    });
+  };
 });
 
 
