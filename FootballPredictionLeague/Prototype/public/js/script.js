@@ -54,10 +54,12 @@ function matchPasswords() {
   if($("#new-password").val() == $("#confirm-password").val()) {
     $("#new-password").css("borderColor", "green");
     $("#confirm-password").css("borderColor", "green");
+    $("#register-submit").prop("disabled", false);
     console.log("passwords match");
   } else {
     $("#new-password").css("borderColor", "red");
     $("#confirm-password").css("borderColor", "red");
+    $("#register-submit").prop("disabled", true);
     console.log("passwords don't match");
   }
 }
