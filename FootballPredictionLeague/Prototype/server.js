@@ -20,7 +20,7 @@ MongoClient.connect(url, function(err, database) {
 
 app.post("/register", function(req, res) {
   var user = req.body.username;
-  db.collection("user").find({username:user}).count()(function(err, result) {
+  db.collection("user").count({username:user}, function(err, result) {
     if(err) throw err;
     if(result > 0) {
       console.log(user + " found " + result + "times");  
