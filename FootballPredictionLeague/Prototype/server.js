@@ -23,39 +23,21 @@ app.post("/register", function(req, res) {
   db.collection("user").count({username:user}, function(err, result) {
     if(err) throw err;
     if(result > 0) {
-      console.log(user + " found " + result + "times");  
+      console.log(user + " found " + result + "times");
+      alert(user + " already exists. Please try logging in");
     }
     else {
-      console.log(user + " is a new user");
-    }
-    res.redirect("/");
+      db.collection("user").save(req.body, function(err, result) {
+        if(err) throw err;
+        console.log("New user " + user + " added succesfully");
+        res.redirect("/");
+      });
+    } 
   });
 });
 
 
 /*
-// Define the /search route
-// When Search is called it pulls the inputted name, and returns a formatted page of results
-app.post('/search', function(req, res) {
-     db.collection('quotes').find(req.body).toArray(function(err, result) {
-         if(err) throw err;
-         
-         var output = "<h1>Retrieved Quotes</h1>";
-         
-         for(var i = 0; i < result.length; i++) {
-             output += "<div>"
-             output += "<h3>" + result[i].name + "</h3>"
-             output += "<p>" + result[i].quote + "</p>"
-             output += "<div>"
-         }
-         
-         res.send(output);
-     });
-});
-
-
-
-
 
 app.post("/register", function(req, res) {
   var user = req.body.username;
