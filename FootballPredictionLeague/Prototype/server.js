@@ -20,7 +20,7 @@ MongoClient.connect(url, function(err, database) {
 /* GET routes - displaying pages */
 
 app.get('/', function(req,res) {
-  res.render('/pages/index')
+  res.render('pages/index')
 });
 
 app.get("/predictions", function (req, res) {
