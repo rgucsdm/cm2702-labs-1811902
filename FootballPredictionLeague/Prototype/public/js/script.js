@@ -30,6 +30,8 @@ $(function() {
   /* Submit predictions */
   
   
+  $
+  
   
   
 }); /* end of document ready */
