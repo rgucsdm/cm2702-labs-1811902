@@ -17,6 +17,53 @@ MongoClient.connect(url, function(err, database) {
 });
   
 /* Add new user to the db */
+
+app.post("/register", function(req, res) {
+  var user = req.body.username;
+  var userCount = db.collection("user").find({username:user}).count();
+  console.log("User: " + user +" count " + userCount);
+  
+  /*
+  if(db.collection("user").find({username:user}).count() > 0) {
+    console.log("You have already registered");
+  } 
+  else {
+      db.collection("user").save(req.body, function(err, result) {
+      if(err) throw err;
+      console.log("New user " + user + " added succesfully");
+      res.redirect("/");
+    });
+    console.log("Adding new user");
+    res.redirect("/");
+  };*/
+  
+});
+
+
+
+// Define the /search route
+// When Search is called it pulls the inputted name, and returns a formatted page of results
+app.post('/search', function(req, res) {
+     db.collection('quotes').find(req.body).toArray(function(err, result) {
+         if(err) throw err;
+         
+         var output = "<h1>Retrieved Quotes</h1>";
+         
+         for(var i = 0; i < result.length; i++) {
+             output += "<div>"
+             output += "<h3>" + result[i].name + "</h3>"
+             output += "<p>" + result[i].quote + "</p>"
+             output += "<div>"
+         }
+         
+         res.send(output);
+     });
+});
+
+
+
+
+
 app.post("/register", function(req, res) {
   var user = req.body.username;
   if(db.collection("user").find({username:user}).count() > 0) {
@@ -29,6 +76,7 @@ app.post("/register", function(req, res) {
       res.redirect("/");
     });*/
     console.log("Adding new user");
+    res.redirect("/");
   };
   
 });
