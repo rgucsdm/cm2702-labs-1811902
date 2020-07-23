@@ -20,27 +20,20 @@ MongoClient.connect(url, function(err, database) {
 
 app.post("/register", function(req, res) {
   var user = req.body.username;
-  var userCount = db.collection("user").find({username:user}).count();
-  console.log("User: " + user +" count " + userCount);
-  
-  /*
-  if(db.collection("user").find({username:user}).count() > 0) {
-    console.log("You have already registered");
-  } 
-  else {
-      db.collection("user").save(req.body, function(err, result) {
-      if(err) throw err;
-      console.log("New user " + user + " added succesfully");
-      res.redirect("/");
-    });
-    console.log("Adding new user");
+  db.collection("user").find({username:user}).count()(function(err, result) {
+    if(err) throw err;
+    if(result > 0) {
+      console.log(user + " found " + result + "times");  
+    }
+    else {
+      console.log(user + " is a new user");
+    }
     res.redirect("/");
-  };*/
-  
+  });
 });
 
 
-
+/*
 // Define the /search route
 // When Search is called it pulls the inputted name, and returns a formatted page of results
 app.post('/search', function(req, res) {
@@ -70,18 +63,18 @@ app.post("/register", function(req, res) {
     console.log("You have already registered");
   } 
   else {
-    /*db.collection("user").save(req.body, function(err, result) {
+    db.collection("user").save(req.body, function(err, result) {
       if(err) throw err;
       console.log("New user " + user + " added succesfully");
       res.redirect("/");
-    });*/
+    });
     console.log("Adding new user");
     res.redirect("/");
   };
   
 });
 
-
+*/
 
 app.listen(8080);
 console.log("Your server is listening for requests on port 8080");
