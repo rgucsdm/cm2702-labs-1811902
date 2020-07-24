@@ -20,19 +20,27 @@ MongoClient.connect(url, function(err, database) {
 /* GET routes - displaying pages */
 
 app.get("/", function(req,res) {
-  res.render("pages/index");
+  res.render("pages/index", {
+    pageTitle: "Home"
+  });
 });
 
 app.get("/predictions", function (req, res) {
-  res.render("pages/predictions");
+  res.render("pages/predictions", {
+    pageTitle: "Predictions"
+  });
 });
 
 app.get("/login", function (req, res) {
-  res.render("pages/login");
+  res.render("pages/login", {
+    pageTile: "Login"
+  });
 });
 
 app.get("/", function (req, res) {
-  res.render("pages/leaderboard");
+  res.render("pages/leaderboard", {
+    pageTile: "Leaderboard"
+  });
 });
 
 
