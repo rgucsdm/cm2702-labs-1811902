@@ -21,25 +21,29 @@ MongoClient.connect(url, function(err, database) {
 
 app.get("/", function(req,res) {
   res.render("pages/index", {
-    pageTitle: "Home"
+    pageTitle: "Home",
+    pageHeader: "FOOTBALL PREDICTION LEAGUE"
   });
 });
 
 app.get("/predictions", function (req, res) {
   res.render("pages/predictions", {
-    pageTitle: "Predictions"
+    pageTitle: "Predictions",
+    pageHeader: "MY PREDICTIONS"
   });
 });
 
 app.get("/login", function (req, res) {
   res.render("pages/login", {
-    pageTile: "Login"
+    pageTitle: "Login",
+    pageHeader: "FOOTBALL PREDICTION LEAGUE"
   });
 });
 
 app.get("/", function (req, res) {
   res.render("pages/leaderboard", {
-    pageTile: "Leaderboard"
+    pageTitle: "Leaderboard",
+    pageHeader: "LEADERBOARD"
   });
 });
 
