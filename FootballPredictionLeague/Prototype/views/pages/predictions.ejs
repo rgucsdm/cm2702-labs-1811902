@@ -17,7 +17,7 @@
     <div class="card-predictions flex-container">
       
       <!-- LAST 16 --> 
-      <div class="stage flex-container">
+      <div class="stage flex-container" id="last16">
 
         <div class="stage-header flex-container">
           <h2>Last 16</h2>  
@@ -27,16 +27,16 @@
         <div class="match-row flex-container" id="match50">
           <div class="match-date">
             <ul>
-              <li>Saturday</li>
-              <li>30-Jun</li>
-              <li>3pm</li>
+              <li><%= match50["day"] %></li>
+              <li><%= match50["date"] %></li>
+              <li><%= match50["time"] %></li>
             </ul>
           </div>    
           <div class="match-team home-team">
             <div class="flag">
               <img src="https://www.geonames.org/flags/x/fr.gif">
             </div>
-            <p>France</p>
+            <p><%= match50["homeTeam"] %></p>
           </div>
           <div class="match-prediction">
             MAIN TIME RESULT
@@ -55,7 +55,7 @@
             <div class="flag">
               <img src="https://www.geonames.org/flags/x/ar.gif">
             </div>
-            <p>Argentina</p>
+            <p><%= match50["awayTeam"] %></p>
           </div>   
           <div class="match-result">
             <p>RESULT</p>
@@ -67,16 +67,16 @@
         <div class="match-row flex-container" id="match49">
           <div class="match-date">
             <ul>
-              <li>Saturday</li>
-              <li>30-Jun</li>
-              <li>7pm</li>
+              <li><%= match49["day"] %></li>
+              <li><%= match49["date"] %></li>
+              <li><%= match49["time"] %></li>
             </ul>
           </div>    
           <div class="match-team home-team">
             <div class="flag">
               <img src="https://www.geonames.org/flags/x/uy.gif">
             </div>
-            <p>Uruguay</p>
+            <p><%= match49["homeTeam"] %></p>
           </div>
           <div class="match-prediction">
             MAIN TIME RESULT
@@ -95,7 +95,7 @@
             <div class="flag">
               <img src="https://www.geonames.org/flags/x/pt.gif">
             </div>
-            <p>Portugal</p>
+            <p><%= match49["awayTeam"] %></p>
           </div>
           <div class="match-result">
             <p>RESULT</p>
@@ -116,7 +116,7 @@
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match51["homeTeam"] %></p>
           </div>
           <div class="match-prediction">
             MAIN TIME RESULT
@@ -135,7 +135,7 @@
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match51["awayTeam"] %></p>
           </div>      
           <div class="match-result">
             <p>RESULT</p>
@@ -156,7 +156,7 @@
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match52["homeTeam"] %></p>
           </div>
           <div class="match-prediction">
             MAIN TIME RESULT
@@ -175,7 +175,7 @@
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match52["awayTeam"] %></p>
           </div>      
           <div class="match-result">
             <p>RESULT</p>
@@ -187,16 +187,16 @@
         <div class="match-row flex-container" id="match53">
           <div class="match-date">
             <ul>
-              <li>Day</li>
-              <li>Date</li>
-              <li>Time</li>
+              <li><%= match53["day"] %></li>
+              <li><%= match53["date"] %></li>
+              <li><%= match53["time"] %></li>
             </ul>
           </div>    
           <div class="match-team home-team">
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match53["homeTeam"] %></p>
           </div>
           <div class="match-prediction">
             MAIN TIME RESULT
@@ -215,7 +215,7 @@
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match53["awayTeam"] %></p>
           </div>      
           <div class="match-result">
             <p>RESULT</p>
@@ -227,16 +227,16 @@
         <div class="match-row flex-container" id="match54">
           <div class="match-date">
             <ul>
-              <li>Day</li>
-              <li>Date</li>
-              <li>Time</li>
+              <li><%= match54["day"] %></li>
+              <li><%= match54["date"] %></li>
+              <li><%= match54["time"] %></li>
             </ul>
           </div>    
           <div class="match-team home-team">
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match54["homeTeam"] %></p>
           </div>
           <div class="match-prediction">
             MAIN TIME RESULT
@@ -255,7 +255,7 @@
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match54["awayTeam"] %></p>
           </div>      
           <div class="match-result">
             <p>RESULT</p>
@@ -267,16 +267,16 @@
         <div class="match-row flex-container" id="match55">
           <div class="match-date">
             <ul>
-              <li>Day</li>
-              <li>Date</li>
-              <li>Time</li>
+              <li><%= match55["day"] %></li>
+              <li><%= match55["date"] %></li>
+              <li><%= match55["time"] %></li>
             </ul>
           </div>    
           <div class="match-team home-team">
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match55["homeTeam"] %></p>
           </div>
           <div class="match-prediction">
             MAIN TIME RESULT
@@ -295,7 +295,7 @@
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match55["awayTeam"] %></p>
           </div>      
           <div class="match-result">
             <p>RESULT</p>
@@ -307,16 +307,16 @@
         <div class="match-row flex-container" id="match56">
           <div class="match-date">
             <ul>
-              <li>Day</li>
-              <li>Date</li>
-              <li>Time</li>
+              <li><%= match56["day"] %></li>
+              <li><%= match56["date"] %></li>
+              <li><%= match56["time"] %></li>
             </ul>
           </div>    
           <div class="match-team home-team">
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match56["homeTeam"] %></p>
           </div>
           <div class="match-prediction">
             MAIN TIME RESULT
@@ -335,7 +335,7 @@
             <div class="flag">
               <img src="./images/flag_placeholder.png">
             </div>
-            <p>Country</p>
+            <p><%= match56["awayTeam"] %></p>
           </div>      
           <div class="match-result">
             <p>RESULT</p>

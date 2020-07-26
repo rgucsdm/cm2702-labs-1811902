@@ -1,5 +1,5 @@
 $(function() {
-  
+
   /* EFFECTS */
   
   /* Match stages - accordion effect */
@@ -16,8 +16,23 @@ $(function() {
   
   /* PREDICTIONS */
   
-  /* Populate match data */
-  getMatchDate();
+  /* REST API - get country data */
+  $("#last16").find(".match-team > p").each(function() {
+    var countryName = $(this).text();
+    var code = getCountryCode(countryName);
+    //console.log(code);
+    //setFlag(getCountryCode(countryName));
+  });
+
+  /*$("#last16").find(".match-team").each(function() {
+    var countryName = $(this).find("> p").text();
+    getCountryCode(countryName);
+    //var image = $(this).find("img").attr("src");
+    //var code = getCountryCode(countryName, image);
+    console.log(code);
+    //setFlag(getCountryCode(countryName));
+  });*/
+   
   
   /* Assign events to buttons */
   /* Match prediction buttons */
@@ -30,23 +45,21 @@ $(function() {
     getDrawWinner(event.target);
   });
   
-  /* Submit predictions */
-  
-  
-  
-  
-  
+
   
 }); /* end of document ready */
 
-function getMatchDate() {
-  $(".match-date").each(function() {
-    var matchID = $(this).closest(".match-row").attr("id");
-    console.log(matchID);
-  })
-  
-  
-  
+/* REST Country API - get country code */
+function getCountryCode(countryName) {
+  var url = "https://restcountries.eu/rest/v2/name/" + countryName;
+  $.getJSON(url, function(jsondata) {
+    var code = jsondata[0].alpha2Code.toLowerCase();
+    console.log(code);
+  });
+}
+              
+function setFlag(alpha2code, image) {
+  //$(".flag > img").attr("src", "https://www.geonames.org/flags/x/" + alpha2code + ".gif");
 }
 
 /* EFFECTS */

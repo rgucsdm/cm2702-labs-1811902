@@ -26,18 +26,6 @@ app.get("/", function(req,res) {
   });
 });
 
-/*app.get("/predictions", function (req, res) {
-  db.collection("wc2018").findOne({matchID: "match51"}, function(err, result) {
-    if(err) throw err;
-    res.render("pages/predictions", {
-      match: result,
-      pageTitle: "Predictions",
-      pageHeader: "MY PREDICTIONS"
-    })
-    console.log("Getting there");
-  })
-});*/
-
 app.get("/predictions", function(req, res) {
   db.collection("wc2018").find().toArray(function(err, result) {
     if(err) throw err;
@@ -54,29 +42,7 @@ app.get("/predictions", function(req, res) {
       match56: result.find(e => e.matchID === "match56"),
     })
   })
-  //console.log("Getting there");
 });
-/*
-//this is our profile route, it takes in a username and uses that to search the database for a specific user
-app.get('/profile', function(req, res) {
-  if(!req.session.loggedin){res.redirect('/login');return;}
-  //get the requested user based on their username, eg /profile?username=dioreticllama
-  var uname = req.query.username;
-  //this query finds the first document in the array with that username.
-  //Because the username value sits in the login section of the user data we use login.username
-  db.collection('people').findOne({
-    "login.username": uname
-  }, function(err, result) {
-    if (err) throw err;
-    //console.log(uname+ ":" + result);
-    //finally we just send the result to the user page as "user"
-    res.render('pages/profile', {
-      user: result
-    })
-  });
-});
-*/
-
 
 app.get("/login", function (req, res) {
   res.render("pages/login", {
@@ -93,7 +59,7 @@ app.get("/leaderboard", function (req, res) {
 });
 
 
-
+/* POST routes */
 /* Add new user to the db */
 
 app.post("/register", function(req, res) {
