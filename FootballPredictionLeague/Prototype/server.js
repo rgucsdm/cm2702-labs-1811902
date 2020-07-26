@@ -39,16 +39,16 @@ app.get("/", function(req,res) {
 });*/
 
 app.get("/predictions", function (req, res) {
-  var match51;
-  db.collection("wc2018").findOne({matchID: "match51"}).toArray(function(err, result) {
+  var match51 = "TBC";
+  db.collection("wc2018").find().toArray(function(err, result) {
     if(err) throw err;
-      match51 = result;
+      console.log(result);
     })
     console.log("Getting there");
     res.render("pages/predictions", {
       pageTitle: "Predictions",
       pageHeader: "MY PREDICTIONS",
-      match: match51
+      match: "match51"
   })
 });
 
