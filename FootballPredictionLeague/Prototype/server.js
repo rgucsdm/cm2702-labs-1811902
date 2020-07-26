@@ -27,19 +27,20 @@ app.get("/", function(req,res) {
 });
 
 app.get("/predictions", function (req, res) {
-  var matchDay = "TBC";
   db.collection("wc2018").findOne({matchID: "match51"}, function(err, result) {
     if(err) throw err;
-    /*res.render("pages/predictions", {
-      wc2018: result
-    })*/
+    res.render("pages/predictions", {
+      wc2018: result,
+      pageTitle: "Predictions",
+      pageHeader: "MY PREDICTIONS"
+    })
     console.log("Getting there");
   })
   
-  res.render("pages/predictions", {
+  /*res.render("pages/predictions", {
     pageTitle: "Predictions",
     pageHeader: "MY PREDICTIONS"
-  });
+  });*/
   
 });
 
