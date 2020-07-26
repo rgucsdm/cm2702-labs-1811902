@@ -42,9 +42,10 @@ app.get("/predictions", function (req, res) {
   var match51 = "TBC";
   db.collection("wc2018").find().toArray(function(err, result) {
     if(err) throw err;
-      console.log(result);
+    match51 = $.grep(result, function(e){return e.matchID == "match51"});
+    console.log(match51);
     })
-    console.log("Getting there");
+    //console.log("Getting there");
     res.render("pages/predictions", {
       pageTitle: "Predictions",
       pageHeader: "MY PREDICTIONS",
