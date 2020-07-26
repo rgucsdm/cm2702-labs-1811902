@@ -47,7 +47,8 @@ app.get("/predictions", function(req, res) {
     res.render("pages/predictions", {
       pageTitle: "Predictions",
       pageHeader: "MY PREDICTIONS",
-      match51: result.find(e => e.matchID === "match51")
+      match51: result.find(e => e.matchID === "match51"),
+      match52: result.find(e => e.matchID === "match52"),
     })
   })
   //console.log("Getting there");
