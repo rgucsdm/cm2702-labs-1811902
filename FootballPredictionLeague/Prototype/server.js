@@ -27,11 +27,11 @@ app.get("/", function(req,res) {
 });
 
 app.get("/predictions", function (req, res) {
-  var matchDay = "";
+  /*var matchDay = "";
   db.collection("wc2018").findOne({matchID: "match51"}, function(err, result) {
     if err throw err;
     console.log(result);
-  })
+  })*/
   
   res.render("pages/predictions", {
     pageTitle: "Predictions",
@@ -40,6 +40,7 @@ app.get("/predictions", function (req, res) {
   
 });
 
+/*
 //this is our profile route, it takes in a username and uses that to search the database for a specific user
 app.get('/profile', function(req, res) {
   if(!req.session.loggedin){res.redirect('/login');return;}
@@ -58,7 +59,7 @@ app.get('/profile', function(req, res) {
     })
   });
 });
-
+*/
 
 
 app.get("/login", function (req, res) {
