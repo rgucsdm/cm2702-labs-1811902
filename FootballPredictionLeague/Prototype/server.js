@@ -39,16 +39,19 @@ app.get("/", function(req,res) {
 });*/
 
 app.get("/predictions", function(req, res) {
-  //var match51;
   db.collection("wc2018").find().toArray(function(err, result) {
     if(err) throw err;
-    //match51 = result.find(e => e.matchID === "match51");
-    //console.log(match51["day"]);
     res.render("pages/predictions", {
       pageTitle: "Predictions",
       pageHeader: "MY PREDICTIONS",
+      match49: result.find(e => e.matchID === "match49"),
+      match50: result.find(e => e.matchID === "match50"),
       match51: result.find(e => e.matchID === "match51"),
       match52: result.find(e => e.matchID === "match52"),
+      match53: result.find(e => e.matchID === "match53"),
+      match54: result.find(e => e.matchID === "match54"),
+      match55: result.find(e => e.matchID === "match55"),
+      match56: result.find(e => e.matchID === "match56"),
     })
   })
   //console.log("Getting there");
