@@ -27,7 +27,8 @@ app.get("/", function(req,res) {
 });
 
 app.get("/predictions", function (req, res) {
-  /*var matchDay = "";
+  var matchDay = "TBC";
+  /*
   db.collection("wc2018").findOne({matchID: "match51"}, function(err, result) {
     if err throw err;
     console.log(result);
@@ -36,7 +37,7 @@ app.get("/predictions", function (req, res) {
   res.render("pages/predictions", {
     pageTitle: "Predictions",
     pageHeader: "MY PREDICTIONS",
-    day: "TBC"
+    day: matchDay
   });
   
 });
