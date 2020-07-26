@@ -24,15 +24,6 @@ $(function() {
     //setFlag(getCountryCode(countryName));
   });
 
-  /*$("#last16").find(".match-team").each(function() {
-    var countryName = $(this).find("> p").text();
-    getCountryCode(countryName);
-    //var image = $(this).find("img").attr("src");
-    //var code = getCountryCode(countryName, image);
-    console.log(code);
-    //setFlag(getCountryCode(countryName));
-  });*/
-   
   
   /* Assign events to buttons */
   /* Match prediction buttons */
