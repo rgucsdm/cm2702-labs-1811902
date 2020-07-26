@@ -30,7 +30,7 @@ app.get("/predictions", function (req, res) {
   db.collection("wc2018").findOne({matchID: "match51"}, function(err, result) {
     if(err) throw err;
     res.render("pages/predictions", {
-      wc2018: result,
+      match: result,
       pageTitle: "Predictions",
       pageHeader: "MY PREDICTIONS"
     })
