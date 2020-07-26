@@ -30,9 +30,10 @@ app.get("/predictions", function (req, res) {
   var matchDay = "TBC";
   db.collection("wc2018").findOne({matchID: "match51"}, function(err, result) {
     if(err) throw err;
-    res.render("pages/predictions", {
+    /*res.render("pages/predictions", {
       wc2018: result
-    })
+    })*/
+    console.log("Getting there");
   })
   
   res.render("pages/predictions", {
