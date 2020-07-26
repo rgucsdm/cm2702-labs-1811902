@@ -48,7 +48,7 @@ app.get("/predictions", function(req, res) {
     res.render("pages/predictions", {
       pageTitle: "Predictions",
       pageHeader: "MY PREDICTIONS",
-      match: match51
+      match51: match51
     })
   })
   //console.log("Getting there");
