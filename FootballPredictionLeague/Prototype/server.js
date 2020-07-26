@@ -44,15 +44,14 @@ app.get("/predictions", function (req, res) {
     if(err) throw err;
     //match51 = $.grep(result, function(e){return e.matchID == "match51"});
     match51 = result.find(e => e.matchID === "match51");
-    console.log(" Printing match object " + match51);
+    console.log(match51);
+    })
+    //console.log("Getting there");
     res.render("pages/predictions", {
       pageTitle: "Predictions",
       pageHeader: "MY PREDICTIONS",
       match: match51
     })
-  })
-    //console.log("Getting there");
-    
 });
 
 /*
