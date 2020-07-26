@@ -38,21 +38,20 @@ app.get("/", function(req,res) {
   })
 });*/
 
-app.get("/predictions", function(req, res) {
+app.get("/predictions", function (req, res) {
   var match51 = "TBC";
   db.collection("wc2018").find().toArray(function(err, result) {
     if(err) throw err;
     //match51 = $.grep(result, function(e){return e.matchID == "match51"});
-    match51 = result.find(e = > e.matchID === "match51");
-    //console.log(match51["day"]);
-  })
-  //console.log("Getting there");
-  res.render("pages/predictions", {
-    pageTitle: "Predictions",
-    pageHeader: "MY PREDICTIONS",
-    match: match51
+    match51 = result.find(e => e.matchID === "match51");
     console.log(match51["day"]);
-  })
+    })
+    //console.log("Getting there");
+    res.render("pages/predictions", {
+      pageTitle: "Predictions",
+      pageHeader: "MY PREDICTIONS",
+      match: match51
+    })
 });
 
 /*
