@@ -16,6 +16,9 @@ $(function() {
   
   /* PREDICTIONS */
   
+  /* Populate match data */
+  getMatchDate();
+  
   /* Assign events to buttons */
   /* Match prediction buttons */
   $(".btn-group>button").click(function() {
@@ -30,11 +33,21 @@ $(function() {
   /* Submit predictions */
   
   
-  $
+  
   
   
   
 }); /* end of document ready */
+
+function getMatchDate() {
+  $(".match-date").each(function() {
+    var matchID = $(this).closest(".match-row").attr("id");
+    console.log(matchID);
+  })
+  
+  
+  
+}
 
 /* EFFECTS */
 
@@ -43,7 +56,7 @@ function collapse(areaClicked) {
   $(headerClicked).toggleClass("closed");
   $(headerClicked).siblings().each(function() {
     if($(this).is(":hidden")) {
-      console.log("Hidden");
+      //console.log("Hidden");
     }
     $(this).slideToggle();
   });
@@ -57,12 +70,12 @@ function matchPasswords() {
     $("#new-password").css("borderColor", "green");
     $("#confirm-password").css("borderColor", "green");
     $("#register-submit").prop("disabled", false);
-    console.log("passwords match");
+    //console.log("passwords match");
   } else {
     $("#new-password").css("borderColor", "red");
     $("#confirm-password").css("borderColor", "red");
     $("#register-submit").prop("disabled", true);
-    console.log("passwords don't match");
+    //console.log("passwords don't match");
   }
 }
 

@@ -3,13 +3,39 @@
 <html>
 
 <head>
-  <%- include ("../partials/head") %>
+  <meta charset="utf-8" />
+  <title>My predictions</title>
+
+  <!--CSS frameworks-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.0/milligram.css">
+
+  <!--CSS Stylesheets-->
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  
+  <!--Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/script.js"></script>
+
 </head>
 
 <body class="flex-container">
 
   <header class="flex-container">
-    <%- include ("../partials/header") %>
+    <img class="site_logo" src="./images/acc_crest.png" title="Home">
+    <h1>MY PREDICTIONS</h1>
+    <div class="navigation flex-container">
+      <div>
+        <a href="./index.html">Home</a>
+      </div>
+      <div>
+        <a href="./predictions.html">Predictions</a>
+      </div>
+      <div>
+        <a href="./login.html">Log in</a>
+      </div>
+    </div>
   </header>
 
   <div class="content content-column flex-container">
@@ -107,7 +133,7 @@
         <div class="match-row flex-container" id="match51">
           <div class="match-date">
             <ul>
-              <li><%= day %></li>
+              <li>Day</li>
               <li>Date</li>
               <li>Time</li>
             </ul>

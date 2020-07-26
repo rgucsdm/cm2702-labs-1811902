@@ -320,9 +320,6 @@ footer {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    --justify-content: center;
-    --flex-direction: row;
-    --flex-wrap: wrap;
   }
   
   #finalists-prediction {
