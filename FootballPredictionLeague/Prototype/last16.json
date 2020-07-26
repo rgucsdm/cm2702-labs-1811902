@@ -1,5 +1,4 @@
-// TEST
-[{
+{
   "matchID": "match50",
   "homeTeam": "France",
   "awayTeam": "Argentina",
@@ -55,4 +54,4 @@
   "day": "Tuesday",
   "date": "03-Jul",
   "time": "7pm"
-}]
+}
