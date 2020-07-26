@@ -46,15 +46,13 @@ app.get("/predictions", function(req, res) {
     match51 = result.find(e => e.matchID === "match51");
     console.log(match51["day"]);
     res.render("pages/predictions", {
-    pageTitle: "Predictions",
-    pageHeader: "MY PREDICTIONS",
-    match: match51
-  })
+      pageTitle: "Predictions",
+      pageHeader: "MY PREDICTIONS",
+      match: match51
+    })
   })
   //console.log("Getting there");
-  
 });
-
 /*
 //this is our profile route, it takes in a username and uses that to search the database for a specific user
 app.get('/profile', function(req, res) {
