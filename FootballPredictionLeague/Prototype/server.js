@@ -43,7 +43,7 @@ app.get("/predictions", function(req, res) {
   db.collection("wc2018").find().toArray(function(err, result) {
     if(err) throw err;
     //match51 = $.grep(result, function(e){return e.matchID == "match51"});
-    match51 = result.find(e = > e.matchID === "match51");
+    match51 = result.find(e => e.matchID === "match51");
     console.log(match51["day"]);
   })
   //console.log("Getting there");
