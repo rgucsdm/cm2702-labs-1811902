@@ -44,7 +44,7 @@ app.get("/predictions", function (req, res) {
     if(err) throw err;
     //match51 = $.grep(result, function(e){return e.matchID == "match51"});
     match51 = result.find(e => e.matchID === "match51");
-    console.log(match51);
+    console.log("Printing object " + match51);
     })
     //console.log("Getting there");
     res.render("pages/predictions", {
