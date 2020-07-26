@@ -40,7 +40,7 @@ app.get("/", function(req,res) {
 
 app.get("/predictions", function (req, res) {
   var match51;
-  db.collection("wc2018").findOne({matchID: "match51"}, function(err, result) {
+  db.collection("wc2018").findOne({matchID: "match51"}).toArray(function(err, result) {
     if(err) throw err;
       match51 = result;
     })
